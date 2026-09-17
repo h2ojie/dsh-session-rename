@@ -1,0 +1,15 @@
+# Profile composition patch for this bundle (referenced by package.json
+# `dsh.bundle.patch`). `dsh plugin --profile web add <dir>` registers this
+# package as a profile bundle layer, and the harness applies this patch at boot
+# to mount the Host half (lib/index.js) as a cordis plugin.
+#
+# `name` is resolved relative to this file, so `./lib/index.js` points at this
+# package's Host half.
+#
+# This row registers into the host `tools` registry and publishes no service, so
+# it needs no isolate realm — the same shape the base composition uses for its
+# own tool rows.
+
+- insert:
+    - id: dsh-session-rename
+      name: ./lib/index.js
