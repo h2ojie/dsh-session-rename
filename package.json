@@ -1,7 +1,7 @@
 {
   "name": "dsh-session-rename",
-  "version": "1.0.0",
-  "description": "Let a DSH agent rename its own session/conversation through a rename_session tool.",
+  "version": "1.1.0",
+  "description": "Let a DSH agent rename its own session/conversation, and rename a session automatically from the ticket path a human names.",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
